@@ -1,0 +1,24 @@
+<main>
+  <app-learning-resources />
+
+  <hr />
+
+  <app-auth />
+
+  <!-- @if (isAdmin()) {
+  <p>Only admin can access the learning resources.</p>
+  } -->
+
+  <!-- Structural Directive -->
+  <!-- <p *ngIf="isAdmin()">Only admin can access the learning resources.</p> -->
+  <!-- <ng-template appAuthLink="admin">
+    <p>Only admin can access the learning resources.</p>
+  </ng-template> -->
+  <p *appAuthLink="'admin'" class="protected-content admin">
+    Only admin can access the learning resources.
+  </p>
+  <p *appAuthLink="'user'" class="protected-content unauthenticated">
+    Regular users should see this!
+  </p>
+  <p *appAuthLink="'guest'" class="protected-content authenticated">Guests should see this!</p>
+</main>
