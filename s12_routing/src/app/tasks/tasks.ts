@@ -1,8 +1,8 @@
-import { Component, computed, inject, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { TaskComponent } from './task/task';
-import { TasksService } from './tasks.service';
 import { ResolveFn, RouterLink } from '@angular/router';
 import { Task } from './task/task.model';
+import { TasksService } from './tasks.service';
 
 @Component({
   selector: 'app-tasks',

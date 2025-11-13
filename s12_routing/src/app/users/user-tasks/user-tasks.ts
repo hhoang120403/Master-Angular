@@ -1,12 +1,6 @@
-import { Component, computed, inject, input, OnInit } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { UsersService } from '../users.service';
-import {
-  ActivatedRoute,
-  ResolveFn,
-  RouterLink,
-  RouterOutlet,
-  RouterStateSnapshot,
-} from '@angular/router';
+import { ResolveFn, RouterLink, RouterOutlet, RouterStateSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-user-tasks',
